@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tweetshot</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-blue-400">
+<div class="container mx-auto p-6 text-base text-white font-sans">
+    <h1 class="w-full text-4xl text-center mb-6">
+        Tweet<span class="font-semibold">shot</span>
+    </h1>
+    <div class="flex flex-wrap">
+        <div class="w-full md:w-1/4"></div>
+        <div class="w-full md:w-1/2">
+            <form id="form-screenshot" action="" method="post">
+                <div class="w-full mb-6">
+                    <label for="url" class="block uppercase tracking-wide text-xs font-bold mb-2">
+                        Tweet URL
+                    </label>
+                    <input id="url" type="url" name="url"
+                           value="https://twitter.com/gvrizzo/status/1128198774885474305"
+                           placeholder="https://twitter.com/status/user/"
+                           class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:bg-gray-100 focus:border-blue-600 hover:bg-gray-100 hover:border-blue-600" />
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-2">
+                    <div class="w-full md:w-1/2 px-3 mb-6">
+                        <label for="theme" class="block uppercase tracking-wide text-xs font-bold mb-2">Theme</label>
+                        <select name="theme" id="theme"
+                                class="block appearance-none w-full border border-blue-600 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-gray-100 focus:border-gray-500 hover:bg-gray-100 hover:border-blue-600">
+                            <option value="light" selected="">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
+                    <div class="w-full md:w-1/2 px-3 mb-6">
+                        <label for="lang" class="block uppercase tracking-wide text-xs font-bold mb-2">Language</label>
+                        <select name="lang" id="lang"
+                                class="block appearance-none w-full border border-blue-600 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-gray-100 focus:border-gray-500 hover:bg-gray-100 hover:border-blue-600">
+                            <option value="de">Deutsche</option>
+                            <option value="en" selected="selected">English</option>
+                            <option value="es">Español</option>
+                            <option value="pt">Português</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex justify-center mb-6">
+                    <button id="go" title="Take Screenshot"
+                            class="rounded-full h-32 w-32 p-4 flex flex-col items-center justify-center shadow bg-white
+                    text-gray-900
+                    hover:bg-gray-300
+                    focus:shadow-outline focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 512 512" class="flex h-12 w-12 fill-current mb-1">
+                            <path d="M512 144v288c0 27-21 48-48 48H48c-26 0-48-21-48-48V144c0-26 22-48 48-48h88l12-33c7-19 25-31 45-31h126c20 0 38 12 45 31l12 33h88c27 0 48 22 48 48zM376 288a120 120 0 10-240 0 120 120 0 00240 0zm-32 0a88 88 0 11-176 0 88 88 0 01176 0z"/>
+                        </svg>
+                        <span class="text-xs uppercase">Take Screenshot</span>
+                    </button>
+                </div>
+            </form>
+            <div class="flex justify-center m-6" id="preview"></div>
+            <div class="flex justify-center">
+                <div class="w-full md:w-1/2 text-center">
+                    Created by
+                    <a href="https://twitter.com/castroalves" target="_blank" class="hover:underline font-bold">
+                        @castroalves
+                    </a>
+                    <br />
+                    Version 0.1.0
+                </div>
+            </div>
+        </div>
+        <div class="w-full md:w-1/4"></div>
+    </div>
+</div>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
