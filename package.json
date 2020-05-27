@@ -1,8 +1,8 @@
 {
-  "name": "nest-typescript-starter",
+  "name": "tweetshot-website",
   "private": true,
-  "version": "1.0.0",
-  "description": "Nest TypeScript starter repository",
+  "version": "0.1.0",
+  "description": "Create screenshots of tweets",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
